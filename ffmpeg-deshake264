@@ -1,0 +1,12 @@
+rm -f stabilized264.mp4
+#ffmpeg -i "$1" -filter:v bwdif=mode=send_field:parity=auto:deint=all -vf yadif,format=yuv420p,vidstabtransform=zoom=2:optzoom=1:crop=black,unsharp=5:5:1.0:5:5:0.0 -c:v libx264  -b:a 32k  stabilized264.mp4
+
+ffmpeg -i "$1" -vf yadif,format=yuv420p,vidstabtransform=zoom=0:optzoom=1:crop=keep -c:v libx264  -b:a 32k  stabilized264.mp4
+
+#ffmpeg -i "$1" -vf yadif,format=yuv420p,vidstabtransform=zoom=2:optzoom=0:crop=keep -c:v libx264  -b:a 32k  stabilized264BlackBorder.mp4
+
+#ffmpeg -i "$1" -vf yadif,format=yuv420p,vidstabtransform=zoom=0:optzoom=2:crop=black,unsharp=5:5:0.8:3:3:0.4,atadenoise -c:v libx264  -b:a 32k  stabilized264.mp4
+
+#ffmpeg -i "$1" -vf yadif,format=yuv420p,vidstabtransform=zoom=-2:optzoom=1:crop=black,unsharp=5:5:0.8:3:3:0.4,atadenoise -c:v libx264  -b:a 32k  stabilized264.mp4
+
+

@@ -1,0 +1,2 @@
+ffmpeg -i $1 -filter_script:v /usr/local/share/skipperi.txt -c:v libx264 -crf 18 -preset slow skipped.mp4
+

@@ -1,0 +1,3 @@
+ffmpeg-deshake1 "$1"
+#ffmpeg-deshake2 "$1"
+ffmpeg-deshake264 "$1"
