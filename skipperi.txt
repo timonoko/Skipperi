@@ -1,0 +1,4 @@
+blurdetect,
+metadata=mode=select:key=lavfi.blur:value=6:function=greater,
+setpts=N/FRAME_RATE/TB,
+minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc
